@@ -242,6 +242,125 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.giki.online/2018/06/26/20180626/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GIKI">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/GIKI/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GIKI's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/26/20180626/" itemprop="url">常用的字符串匹配算法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-26T18:35:39+08:00">
+                2018-06-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blog.giki.online/2018/06/25/20180625/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -312,38 +431,23 @@
 
       
         
-          
-            <h2 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1,环境准备"></a>1,环境准备</h2><h3 id="1-1-node-js"><a href="#1-1-node-js" class="headerlink" title="1.1 node.js"></a>1.1 node.js</h3><h4 id="一、官网下载-安装node-js"><a href="#一、官网下载-安装node-js" class="headerlink" title="一、官网下载 安装node.js"></a>一、官网下载 安装node.js</h4><p><a href="https://blog.csdn.net/u010053344/article/details/50545304" target="_blank" rel="noopener">Mac 安装 nodejs 详细教程</a></p>
+          <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><h4 id="一、官网下载-安装node-js"><a href="#一、官网下载-安装node-js" class="headerlink" title="一、官网下载 安装node.js"></a>一、官网下载 安装node.js</h4><p><a href="https://blog.csdn.net/u010053344/article/details/50545304" target="_blank" rel="noopener">Mac 安装 nodejs 详细教程</a></p>
 <h4 id="二、利用Homebrew安装node-js"><a href="#二、利用Homebrew安装node-js" class="headerlink" title="二、利用Homebrew安装node.js"></a>二、利用Homebrew安装node.js</h4><p>Homebrew简称brew，是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件。<br>1.打开终端，执行以下命令安装Homebrew<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure></p>
 <p>会提示输入系统密码，输入密码继续安装。<br>如安装成功则会看到：Installation successful!<br>此时可以在命令行中输入命令brew进行测试，可以看到如下结果,说明安装成功。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Example usage:</span><br><span class="line">brew search [TEXT|/REGEX/]</span><br><span class="line">brew (info|home|options) [FORMULA...]</span><br><span class="line">brew install FORMULA...</span><br><span class="line">brew update</span><br><span class="line">brew upgrade [FORMULA...]</span><br><span class="line">brew uninstall FORMULA...</span><br><span class="line">brew list [FORMULA...]</span><br><span class="line"></span><br><span class="line">Troubleshooting:</span><br><span class="line">brew config</span><br><span class="line">brew doctor</span><br><span class="line">brew install -vd FORMULA</span><br><span class="line"></span><br><span class="line">Developers:</span><br><span class="line">brew create [URL [--no-fetch]]</span><br><span class="line">brew edit [FORMULA...]</span><br><span class="line">http://docs.brew.sh/Formula-Cookbook.html</span><br><span class="line"></span><br><span class="line">Further help:</span><br><span class="line">man brew</span><br><span class="line">brew help [COMMAND]</span><br><span class="line">brew home</span><br></pre></td></tr></table></figure></p>
 <p>接下来就可以执行以下命令，安装我们需要的node了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure></p>
 <p>执行以下命令查看是否安装成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v:查看node版本</span><br><span class="line">npm -v：查看npm版本</span><br></pre></td></tr></table></figure></p>
 <p>这样就完成了node和npm的安装了.</p>
-<h3 id="1-2-安装Hexo"><a href="#1-2-安装Hexo" class="headerlink" title="1.2 安装Hexo"></a>1.2 安装Hexo</h3><p>由于mac自带git。 当node环境安装完成后。<br>打开终端：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure></p>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>由于mac自带git。 当node环境安装完成后。<br>打开终端：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure></p>
 <p>此时需要输入密码，输入mac登录密码。<br>如无报错，安装完成。</p>
-<h3 id="1-3-创建xxx-github-io仓库"><a href="#1-3-创建xxx-github-io仓库" class="headerlink" title="1.3 创建xxx.github.io仓库"></a>1.3 创建xxx.github.io仓库</h3><p>1,登录github。点击创建一个new repository。<br>如下图，仓库的名称必须是”username.github.io”这种格式。<br>username需要与你github账户名称一致。<br><img src="/images/GIKI/hexo+github/github.io.png" alt="avatar"></p>
-<p>2,填写完成后，可选择相应的gitignore与license。也可不选择。点击Create repository.创建完成。</p>
-<h2 id="2，初始化Hexo"><a href="#2，初始化Hexo" class="headerlink" title="2，初始化Hexo"></a>2，初始化Hexo</h2><p>创建blog文件夹。在终端中打开该文件夹。<br>执行以下命令，来初始化blog。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></p>
-<p>或者以hexo init blog 来初始化。会自动帮你创建blog文件夹。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure></p>
-<p>控制台输出以下信息，表示hexo已经初始化成功。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Start blogging with Hexo!</span><br></pre></td></tr></table></figure></p>
-<p>这个时候你可以开启本地service。来查看你的blog了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo service</span><br><span class="line">or</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
-<p>控制台输出以下信息，表示hexo本地服务器已经启动。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure></p>
-<p>在浏览器中打开 - <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> - 就能看到你的第一个blog了。<br><img src="/images/GIKI/hexo+github/first-blog.png" alt="avatar"></p>
-<h2 id="3，发布到github"><a href="#3，发布到github" class="headerlink" title="3，发布到github"></a>3，发布到github</h2><p>在自己创建的blog文件夹下找到’_config.yml’ 文件。<br>打开’_config.yml’文件，拖到最后,按照如下格式填写。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repository: https://github.com/GIKICoder/GIKICoder.github.io</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure></p>
-<p>如果你在本地配置了SSH Key。repository可配置为SSH。<br><a href="https://blog.csdn.net/gulingfengze/article/details/69665223" target="_blank" rel="noopener">SSH Key 详细教程</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">repository: git@github.com:GIKICoder/GIKICoder.github.io.git</span><br></pre></td></tr></table></figure></p>
-<p>此外，还需要安装一个hexo部署插件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
-<p>以上步骤完成之后，输入以下三个命令，就可以在GIKICoder.github.io.git访问我的博客了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1,清除缓存文件 db.json 和已生成的静态文件 public 。</span><br><span class="line">hexo clean</span><br><span class="line">2,生成网站静态文件到默认设置的 public 文件夹。</span><br><span class="line">hexo generate</span><br><span class="line">or</span><br><span class="line">hexo g</span><br><span class="line">3,自动生成网站静态文件，并部署到设定的仓库。</span><br><span class="line">hexo deploy</span><br><span class="line">or</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<h2 id="4，发布文章"><a href="#4，发布文章" class="headerlink" title="4，发布文章"></a>4，发布文章</h2><p>博客搭建完成之后，我们需要发布文章来完善博客。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post &apos;xxxName&apos;</span><br></pre></td></tr></table></figure>
-<p>执行完成后，在blog文件夹下source-&gt;_posts路径下，就可以看到新建的文章。用<a href="http://wowubuntu.com/markdown/" target="_blank" rel="noopener">markdown</a>编辑即可。<br>新建的文章头部会默认有三行文本。可修改title，以及文章标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo+github搭建blog</span><br><span class="line">date: 2018-06-25 11:43:42</span><br><span class="line">tags: Other</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
-<p>文章编写完成后，还是执行以下三个命令进行部署到github上。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<h2 id="5，给博客更换主题"><a href="#5，给博客更换主题" class="headerlink" title="5，给博客更换主题"></a>5，给博客更换主题</h2><p>官方默认主题不好看？<br>不要着急，可以挑选任意你喜欢的hexo主题进行更换。</p>
-<p>在终端中打开blog文件夹下的themes文件夹。下载自己喜欢的hexo主题。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/icylogic/maupassant-hexo</span><br></pre></td></tr></table></figure>
-<p>下载完成后。将blog目录下_config.yml里theme的名称landscape修改为maupassant-hexo<br>然后同步部署到github就可以看到自己的主题博客了。</p>
-
-          
+<h3 id="创建xxx-github-io仓库"><a href="#创建xxx-github-io仓库" class="headerlink" title="创建xxx.github.io仓库"></a>创建xxx.github.io仓库</h3><p>登录github。点击创建一个new repository。<br>如下图，仓库的名称必须是”username.github.io”这种格式。<br>username需要与你github账户名称一致。<br><img src="/images/GIKI/hexo+github/github.io.png" alt="avatar"></p>
+<p>填写完成后，可选择相应的gitignore与license。也可不选择。点击Create repository.创建完成。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/25/20180625/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -427,7 +531,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -440,7 +544,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
