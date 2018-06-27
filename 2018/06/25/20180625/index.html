@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://blog.giki.online/images/GIKI/hexo+github/github.io.png">
 <meta property="og:image" content="http://blog.giki.online/images/GIKI/hexo+github/first-blog.png">
-<meta property="og:updated_time" content="2018-06-26T10:47:05.226Z">
+<meta property="og:updated_time" content="2018-06-27T02:51:36.210Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+github搭建blog">
 <meta name="twitter:description" content="环境准备node.js一、官网下载 安装node.jsMac 安装 nodejs 详细教程 二、利用Homebrew安装node.jsHomebrew简称brew，是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件。1.打开终端，执行以下命令安装Homebrew1ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent">
@@ -343,6 +343,7 @@
 <p>在终端中打开blog文件夹下的themes文件夹。下载自己喜欢的hexo主题。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/icylogic/maupassant-hexo</span><br></pre></td></tr></table></figure>
 <p>下载完成后。将blog目录下_config.yml里theme的名称landscape修改为maupassant-hexo<br>然后同步部署到github就可以看到自己的主题博客了。</p>
+<h3 id="推荐模板"><a href="#推荐模板" class="headerlink" title="推荐模板"></a>推荐模板</h3><p><a href="https://github.com/iissnan/hexo-theme-next themes/next" target="_blank" rel="noopener">Next主题</a>是一套hexo的主题模板。使用简单方便。也可快速集成评论模块。<br>Next主题设置详见<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">Next官网</a><br>更多Next主题个性化配置详见:<a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" target="_blank" rel="noopener">Next个性化设置</a></p>
 
       
     </div>
@@ -351,7 +352,39 @@
     
 
     
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/GIKI/wechat/wechatD.jpg" alt="GIKI wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的公众号！</div>
+</div>
 
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>It is a hopeless understatement to say that I am deeply grateful.</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/GIKI/wechat/wechatM.jpg" alt="GIKI 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -505,18 +538,6 @@
                         <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   </span>
                 
-                  <span class="links-of-author-item">
-                    <a href="http://www.rootlee.cn/" target="_blank" title="RootLee">
-                      
-                        <i class="fa fa-fw fa-globe"></i>RootLee</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://weibo.com/2073814285/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" title="weibo">
-                      
-                        <i class="fa fa-fw fa-globe"></i>weibo</a>
-                  </span>
-                
             </div>
           
 
@@ -524,6 +545,24 @@
           
 
           
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.rootlee.cn/" title="rootLee" target="_blank">rootLee</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/keayou" title="keayou" target="_blank">keayou</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           
@@ -541,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境准备"><span class="nav-number">1.</span> <span class="nav-text">环境准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#node-js"><span class="nav-number">1.1.</span> <span class="nav-text">node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、官网下载-安装node-js"><span class="nav-number">1.1.1.</span> <span class="nav-text">一、官网下载 安装node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、利用Homebrew安装node-js"><span class="nav-number">1.1.2.</span> <span class="nav-text">二、利用Homebrew安装node.js</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建xxx-github-io仓库"><span class="nav-number">1.3.</span> <span class="nav-text">创建xxx.github.io仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化Hexo"><span class="nav-number">2.</span> <span class="nav-text">初始化Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布到github"><span class="nav-number">3.</span> <span class="nav-text">发布到github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布文章"><span class="nav-number">4.</span> <span class="nav-text">发布文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给博客更换主题"><span class="nav-number">5.</span> <span class="nav-text">给博客更换主题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境准备"><span class="nav-number">1.</span> <span class="nav-text">环境准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#node-js"><span class="nav-number">1.1.</span> <span class="nav-text">node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、官网下载-安装node-js"><span class="nav-number">1.1.1.</span> <span class="nav-text">一、官网下载 安装node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、利用Homebrew安装node-js"><span class="nav-number">1.1.2.</span> <span class="nav-text">二、利用Homebrew安装node.js</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建xxx-github-io仓库"><span class="nav-number">1.3.</span> <span class="nav-text">创建xxx.github.io仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化Hexo"><span class="nav-number">2.</span> <span class="nav-text">初始化Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布到github"><span class="nav-number">3.</span> <span class="nav-text">发布到github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布文章"><span class="nav-number">4.</span> <span class="nav-text">发布文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给博客更换主题"><span class="nav-number">5.</span> <span class="nav-text">给博客更换主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐模板"><span class="nav-number">5.1.</span> <span class="nav-text">推荐模板</span></a></li></ol></li></ol></div>
             
 
           </div>
